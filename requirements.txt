@@ -2,7 +2,7 @@ backoff==2.2.1
 chart_studio==1.1.0
 hdbscan==0.8.29
 matplotlib==3.5.1
-mysql_connector_repackaged==0.3.1
+mysql-connector-python-rf==2.2.2
 numpy==1.23.1
 openai==0.27.1
 pandas==1.4.2
