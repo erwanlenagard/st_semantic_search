@@ -37,17 +37,17 @@ import chart_studio.plotly as py
 
 pd.options.mode.chained_assignment = None
 
-openai.organization = "org-JzsB8MLdpD9vvXLeNTrV96Ha"
-openai.api_key = "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"
+openai.organization = st.secrets['openaiorg'] 
+openai.api_key = st.secrets['openaikey']
 
 # @st.cache_resource
 def connect_bdd():
     
-    HOST='35.233.126.171'
-    DATABASE='tmf_medias'
-    PORT="3306"
-    USER='robot'
-    PASSWORD='bis5SxPu2mbzZ3A'
+    HOST=st.secrets['HOST']
+    DATABASE=st.secrets['DATABASE']
+    PORT=st.secrets['PORT']
+    USER=st.secrets['USER']
+    PASSWORD=st.secrets['PASSWORD']
     engine = create_engine('mysql+mysqlconnector://'+USER+':'+PASSWORD+'@'+HOST+':'+PORT+'/'+DATABASE, 
                                    echo=False,
                                    encoding="utf8")
