@@ -56,7 +56,8 @@ def main():
         
         path=create_dir(os.path.join('.',projet))            
         # on se connecte à la base de données, on récupère un client "engine"
-        engine=connect_bdd()
+#         engine=connect_bdd()
+        engine=connect_with_connector()
 
         #on execute notre requête SQL
         df=query_fb(engine,st.session_state.importation_ids,start.strftime("%Y-%m-%d"),end.strftime("%Y-%m-%d"))
