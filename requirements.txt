@@ -1,3 +1,4 @@
+cloud-sql-python-connector==1.2.1
 backoff==2.2.1
 chart_studio==1.1.0
 hdbscan==0.8.29
